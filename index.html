@@ -13,6 +13,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
 
         header {
@@ -35,6 +36,7 @@
             background: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            transition: background-color 0.5s ease;
         }
 
         img {
@@ -51,21 +53,9 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
-        h3 {
-            font-size: 1.2rem;
-            color: #000000;
-            margin-bottom: 20px;
-        }
-
-        h3.s1 {
-            font-size: 1.1rem;
-            color: #000000;
-        }
-
-        p {
+        h3, p {
             font-size: 1rem;
-            color: #000000;
-            line-height: 1.8;
+            transition: color 0.5s ease;
         }
 
         a {
@@ -88,49 +78,44 @@
             margin-top: 20px;
         }
 
-        .home-button, .nav-button {
+        .toggle-button {
             display: inline-block;
-            margin-top: 20px;
+            margin: 20px auto;
             padding: 12px 25px;
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
             color: #fff;
             font-size: 1rem;
             text-align: center;
             text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 100px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .home-button:hover, .nav-button:hover {
-            background: linear-gradient(45deg, #ff4b2b, #ff416c);
-            transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        .toggle-button:hover {
+            background: linear-gradient(40deg, #ff8c00, #ff0080 70%);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 3rem;
-            }
-
-            .content {
-                padding: 15px;
-            }
-
-            h3 {
-                font-size: 1rem;
-            }
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #26242E;
+            color: #ffffff;
         }
 
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
+        .content.dark-mode {
+            background-color: #34323D;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
 
-            h3 {
-                font-size: 0.9rem;
-            }
+        h3.dark-mode, p.dark-mode, a.dark-mode {
+            color: #ffffff;
+        }
+
+        a.dark-mode:hover {
+            color: #76c7ff;
         }
     </style>
 </head>
@@ -142,136 +127,35 @@
     <div class="content">
         <img src="https://media.istockphoto.com/id/177427917/photo/close-up-of-red-cricket-ball-and-bat-sitting-on-grass.jpg?s=612x612&w=0&k=20&c=DcorerbBUeDNTfld3OclgHxCty4jih2yDCzipffX6zw=" alt="Cricket Image">
 
-        <h3 class="s1">
+        <h3>
             Cricket is a sport with a historical background that traces back to late 16th century England. It was officially recognized as a sporting activity in the 18th century and has since expanded its influence globally throughout the 19th and 20th centuries. 
             <br><br>
             If you want to know more about cricket, explore the following pages:
             <ul>
-                <li><a class="nav-button" href="cricket_world_cups.html">Cricket World Cups</a></li>
-                <li><a class="nav-button" href="virat_kohli.html">Virat Kohli: From Childhood to T20I Retirement</a></li>
+                <li><a href="cricket_world_cups.html">Cricket World Cups</a></li>
+                <li><a href="virat_kohli.html">Virat Kohli: From Childhood to T20I Retirement</a></li>
             </ul>
         </h3>
+
+        <button class="toggle-button" id="darkModeToggle">Switch to Dark Mode</button>
     </div>
 
     <footer class="footer">
         &copy; 2025 The World of Cricket. All rights reserved.
     </footer>
-</body>
-</html>
 
-<!-- Cricket World Cups Page -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket World Cups</title>
-</head>
-<body>
-    <header>
-        <h1>Cricket World Cups</h1>
-    </header>
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const content = document.querySelector('.content');
+        const textElements = document.querySelectorAll('h3, p, a');
 
-    <div class="content">
-        <h3>The ICC Cricket World Cup</h3>
-        <p>
-            The ICC Cricket World Cup is the flagship event of the sport, held every four years. The inaugural tournament was held in 1975 in England. Over the decades, the World Cup has evolved into one of the most anticipated sporting events globally.
-        </p>
-
-        <p>
-            The tournament showcases the best teams from around the world, competing for the coveted trophy. With each edition, the World Cup has witnessed thrilling matches, unforgettable moments, and records that have stood the test of time.
-        </p>
-
-        <h3>Key Moments in World Cup History</h3>
-        <p>
-            <strong>1975:</strong> The first-ever Cricket World Cup saw the West Indies emerge as champions, defeating Australia in a thrilling final. Clive Lloyd's powerful century remains a highlight of the tournament.
-        </p>
-
-        <p>
-            <strong>1983:</strong> India's victory under Kapil Dev is considered one of the most significant moments in cricket history. The underdog team defeated the mighty West Indies, inspiring generations of cricketers in India.
-        </p>
-
-        <p>
-            <strong>1996:</strong> Sri Lanka's remarkable journey to lift the trophy marked a turning point for cricket in the subcontinent. Their innovative batting strategies changed the way the game was played.
-        </p>
-
-        <p>
-            <strong>1999:</strong> Australia began their era of dominance, winning the first of three consecutive World Cups. Shane Warne's magical bowling in the final remains etched in memory.
-        </p>
-
-        <p>
-            <strong>2011:</strong> India, led by MS Dhoni, became the first team to win the World Cup on home soil. Dhoni's match-winning six in the final is one of the most iconic moments in cricket.
-        </p>
-
-        <p>
-            <strong>2019:</strong> England claimed their maiden World Cup in a dramatic final against New Zealand. The match ended in a tie and was decided by a boundary count, leading to widespread debate.
-        </p>
-
-        <p>
-            <strong>Beyond the Matches:</strong> Beyond the games, the World Cup is a platform for cricket diplomacy, cultural exchange, and uniting fans worldwide.
-        </p>
-
-        <p>
-            <strong>The Future:</strong> As cricket expands to new territories, future editions of the World Cup promise innovation and excitement.
-        </p>
-
-        <a class="home-button" href="index.html">Go to Home</a>
-    </div>
-</body>
-</html>
-
-<!-- Virat Kohli Page -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virat Kohli</title>
-</head>
-<body>
-    <header>
-        <h1>Virat Kohli</h1>
-    </header>
-
-    <div class="content">
-        <h3>Early Life</h3>
-        <p>
-            Virat Kohli was born on November 5, 1988, in Delhi, India. From a young age, he displayed exceptional talent in cricket and joined the West Delhi Cricket Academy at the age of nine. His parents supported his passion, ensuring he had the resources to hone his skills.
-        </p>
-
-        <h3>Rise to Stardom</h3>
-        <p>
-            Kohli captained the Indian U-19 team to victory in the 2008 World Cup. His impressive performance caught the attention of selectors, and he made his ODI debut later that year. Kohli's hunger for runs and ability to chase targets made him a crucial part of the team.
-        </p>
-
-        <p>
-            Over the years, Kohli established himself as one of the most consistent performers in international cricket. His aggressive batting style and fitness regime set new benchmarks for cricketers worldwide.
-        </p>
-
-        <h3>Achievements</h3>
-        <p>
-            Kohli's career is studded with numerous accolades. He has over 70 international centuries and is among the fastest to reach milestones in both ODIs and Tests. His leadership saw India achieve historic victories overseas.
-        </p>
-
-        <p>
-            He was named ICC Player of the Year multiple times and has been a leading run-scorer in several tournaments. Kohli's records in the IPL further cement his status as one of the all-time greats.
-        </p>
-
-        <h3>Challenges and Comebacks</h3>
-        <p>
-            Like any athlete, Kohli faced challenges, including a dip in form and personal losses. However, his resilience and determination helped him bounce back stronger each time.
-        </p>
-
-        <h3>Retirement from T20I</h3>
-        <p>
-            In 2021, Kohli announced his retirement from T20I captaincy to focus on other formats and maintain his fitness. While his leadership in the shortest format ended, his contributions as a player remain invaluable.
-        </p>
-
-        <p>
-            Kohli's journey from a young boy in Delhi to one of the greatest cricketers is a testament to his hard work, passion, and dedication. His legacy will inspire future generations.
-        </p>
-
-        <a class="home-button" href="index.html">Go to Home</a>
-    </div>
+        toggleButton.addEventListener('click', () => {
+            const isDarkMode = body.classList.toggle('dark-mode');
+            content.classList.toggle('dark-mode');
+            textElements.forEach(element => element.classList.toggle('dark-mode'));
+            toggleButton.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+        });
+    </script>
 </body>
 </html>
