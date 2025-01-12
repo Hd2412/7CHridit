@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket</title>
+    <title>Chess and Cricket</title>
     <style>
         body {
             background-color: #f5f5f5;
-            color: #000000;
-            font-family: 'Times New Roman', Georgia, serif;
+            color: #000;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -17,7 +17,7 @@
         }
 
         header {
-            background-color: #ff0000;
+            background-color: #004d99;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -25,7 +25,7 @@
         }
 
         header h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             margin: 0;
         }
 
@@ -55,18 +55,6 @@
 
         h3, p {
             font-size: 1rem;
-            transition: color 0.5s ease;
-        }
-
-        a {
-            color: #007aff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #005bb5;
         }
 
         .footer {
@@ -78,119 +66,74 @@
             margin-top: 20px;
         }
 
-        .toggle-button {
-            display: inline-block;
-            margin: 20px auto;
-            padding: 12px 25px;
-            background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
-            color: #fff;
-            font-size: 1rem;
-            text-align: center;
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
             text-decoration: none;
-            border-radius: 100px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            color: #007aff;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
-        .toggle-button:hover {
-            background: linear-gradient(40deg, #ff8c00, #ff0080 70%);
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        nav a:hover {
+            color: #005bb5;
         }
 
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #26242E;
-            color: #ffffff;
+        .fade-in {
+            animation: fadeIn 2s;
         }
 
-        .content.dark-mode {
-            background-color: #34323D;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-
-        h3.dark-mode, p.dark-mode, a.dark-mode {
-            color: #ffffff;
-        }
-
-        a.dark-mode:hover {
-            color: #76c7ff;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Cricket</h1>
+        <h1>Chess and Cricket</h1>
     </header>
 
-    <!-- Cricket Overview Section -->
-    <div class="content">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdXP3TbFGpKtLan_R-FwAzgIe4e6WGJK5mWuvU25ixD8fCzZdVoLG01mywdxm13N5wklI&usqp=CAU" alt="Indian Cricket Image">
+    <nav>
+        <a href="#cricket">Cricket</a>
+        <a href="#chess">Chess</a>
+    </nav>
 
-        <h3>
-            <strong>Indian Cricket:</strong> Cricket in India is more than just a sport—it is a religion. The passion and enthusiasm of Indian cricket fans are unmatched, and the sport is integral to the country’s culture. India has produced some of the greatest cricketers the world has ever seen, and their achievements are celebrated with immense pride. 
-            <br><br>
-            India’s journey in cricket began during the colonial era, when British expatriates and the Indian elite started playing the sport. Over time, cricket evolved into the country’s most popular and watched sport. India’s national team is one of the most successful in the world, having won major international tournaments such as the ICC Cricket World Cup in 1983 and 2007, and the ICC Champions Trophy in 2002.
-            <br><br>
-            One of the highlights of Indian cricket has been its consistent performance in the ICC World Cup. India’s victory in 1983, led by captain Kapil Dev, was a defining moment in the history of Indian cricket, establishing the team as a formidable force on the global stage. The 2007 ICC T20 World Cup victory, led by MS Dhoni, further solidified India’s status as a cricket powerhouse.
-            <br><br>
-            India's cricketing legacy has been shaped by legendary players such as Sunil Gavaskar, Kapil Dev, Sachin Tendulkar, Rahul Dravid, MS Dhoni, and Virat Kohli. These icons have not only contributed to the sport’s global popularity but have also inspired countless young cricketers across the country.
-            <br><br>
-            The Indian Premier League (IPL), established in 2008, has become a major force in world cricket, bringing together international stars and homegrown talent. The IPL has transformed the way cricket is played, with its fast-paced, high-energy format attracting a new generation of fans to the sport.
-            <br><br>
-            Today, Indian cricket is a juggernaut, with millions of fans supporting the national team in all formats of the game. The country continues to produce world-class players who perform on the biggest stages, and Indian cricket remains at the forefront of global cricketing excellence.
-        </h3>
+    <!-- Chess Overview Section -->
+    <div class="content" id="chess">
+        <h2 class="fade-in">Chess: A Game of Kings</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Chess_Board.jpg" alt="Chess Board">
+        <p class="fade-in">Chess, often called the "Game of Kings," is a strategic and intellectual pursuit that has captivated minds for centuries. Originating in India as Chaturanga, chess has evolved into a global phenomenon. Its timeless appeal lies in the endless possibilities and the mental challenge it presents to players of all levels.</p>
 
-        <img src="https://res.cloudinary.com/confirmed-web/image/upload/v1710509954/adidas-group/I3S/stories/images/adidas-India-cricket-team-world-cup-campaign-behind-the-scenes-1440x9999_rwawmq.webp" alt="Indian Cricket Team World Cup">
+        <h3 class="fade-in">Great Chess Champions</h3>
+        <ul class="fade-in">
+            <li><strong>Garry Kasparov:</strong> Widely regarded as one of the greatest chess players of all time, Kasparov dominated the chess world from 1985 to 2000, holding the title of World Chess Champion for over 15 years.</li>
+            <li><strong>Magnus Carlsen:</strong> The reigning World Chess Champion, known for his deep understanding of the game and ability to outplay opponents in seemingly equal positions.</li>
+            <li><strong>Bobby Fischer:</strong> An American chess prodigy who became World Champion in 1972, Fischer is celebrated for his revolutionary ideas and unmatched talent.</li>
+            <li><strong>Viswanathan Anand:</strong> The first Indian to win the World Chess Championship, Anand's contributions have inspired a new generation of players in India.</li>
+        </ul>
 
-        <p>As one of the most successful teams in the history of cricket, India's national cricket team remains a symbol of pride, unity, and achievement. The country's cricketing culture is not just about success on the field, but also about bringing together people from all walks of life to celebrate the sport.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Kasparov-34.jpg" alt="Garry Kasparov">
+        <p class="fade-in">Chess champions are celebrated not only for their victories but also for the depth of their preparation, creativity, and sportsmanship. Their legacies inspire countless players to explore the beauty of chess.</p>
     </div>
 
-    <!-- Virat Kohli Section -->
-    <div class="content" id="virat-kohli-section">
-        <h1>Virat Kohli The BEST Batsmen of this Decade </h1>
-        <img src="https://i.pinimg.com/736x/46/6b/ee/466bee8721d70384b99041c0b108339f.jpg" alt="Virat Kohli Image">
-        <p>
-            Virat Kohli, born on November 5, 1988, in Delhi, India, is not just a cricketer but a global icon whose name resonates with excellence, discipline, and passion for the sport. His journey began in the bustling streets of Delhi, where he first held a cricket bat at the tender age of three. Encouraged by his father, Prem Kohli, Virat joined the West Delhi Cricket Academy at the age of nine, where his talent quickly caught the attention of coaches. His early years were marked by relentless practice and a determination that belied his age.
-            <br><br>
-            Virat's rise through the ranks was meteoric. He led the Indian U-19 team to victory in the 2008 ICC U-19 Cricket World Cup in Malaysia, an achievement that marked him as a future star. Soon after, he debuted for the Indian national team in August 2008 in an ODI against Sri Lanka. While his initial performances were steady rather than spectacular, Kohli's relentless work ethic and hunger for runs soon became evident. By 2010, he had cemented his place in the Indian team across all formats.
-            <br><br>
-            Kohli's batting style is a blend of classical technique and modern aggression. Known for his cover drives, quick running between the wickets, and ability to chase down daunting targets, he is regarded as one of the finest chasers in cricket history. He holds numerous records, including the fastest player to score 8,000, 9,000, 10,000, and 12,000 ODI runs. His consistency in both ODIs and Test cricket is unparalleled, with an average above 50 in both formats—a testament to his adaptability and skill.
-            <br><br>
-            As a captain, Kohli brought an aggressive and fearless approach to the Indian team. He took over the Test captaincy from MS Dhoni in 2014 and transformed India into a dominant force in world cricket. Under his leadership, India reached the top of the ICC Test rankings and maintained their position for several years. He also led India to memorable Test series wins, including a historic victory in Australia in 2018-19—the first-ever Test series win by India on Australian soil.
-            <br><br>
-            Kohli's dominance extended to limited-overs cricket as well. In T20Is, he became the fastest player to reach multiple milestones, including the highest number of 50+ scores in the format. Despite his unparalleled success, one title that eluded him as captain was the ICC T20 World Cup trophy, a fact that remains a bittersweet aspect of his illustrious career. Nonetheless, his impact on Indian cricket and the T20 format is undeniable, inspiring a new generation of players to aim higher and play fearlessly.
-            <br><br>
-            Kohli's career has not been without challenges. The untimely demise of his father in 2006 was a defining moment in his life. Remarkably, a young Kohli chose to play a crucial Ranji Trophy match for Delhi the very next day, scoring a vital 90 runs. This incident exemplified his dedication to cricket and his unyielding spirit. Later in his career, Kohli also faced form slumps and criticism, particularly during phases when centuries seemed elusive. However, each time, he silenced his critics with stunning comebacks, proving his mental toughness and determination.
-            <br><br>
-            Off the field, Kohli has been an advocate for fitness and discipline. His transformation into one of the fittest athletes in the world inspired a fitness revolution in Indian cricket. His commitment to a strict diet, rigorous training regime, and healthy lifestyle set new benchmarks for cricketers globally. Beyond cricket, Kohli's philanthropic efforts through the Virat Kohli Foundation focus on supporting underprivileged children and promoting sports in India.
-            <br><br>
-            Kohli's decision to step down as T20I captain in 2021 and retire from the format in 2023 marked the end of an era. While his fans were emotional about the announcement, Kohli emphasized his desire to focus on other formats and prolong his cricketing career. Even after his retirement from T20Is, his influence on the format remains profound, with many considering him the finest T20 batsman of his generation.
-            <br><br>
-            Today, Virat Kohli's legacy is etched in the annals of cricket history. With over 70 international centuries and countless records to his name, he is regarded as one of the greatest cricketers of all time. More than the numbers, it is his attitude, passion, and drive that define his greatness. Whether it is his fiery celebrations, intense focus on the field, or heartfelt interactions with fans, Kohli embodies the spirit of modern cricket.
-            <br><br>
-            As he continues to play in other formats, Kohli remains a source of inspiration for millions around the world. His journey from a young boy in Delhi to a global superstar is a story of hard work, resilience, and an unrelenting pursuit of excellence.
-        </p>
+    <!-- Cricket Section -->
+    <div class="content" id="cricket">
+        <h2 class="fade-in">Cricket: A Religion in India</h2>
+        <p class="fade-in">Cricket remains one of the most beloved sports globally, uniting fans across cultures and nations. In India, it is more than a game—it is a unifying force. Icons like Virat Kohli, Sachin Tendulkar, and MS Dhoni have left indelible marks on the sport.</p>
     </div>
 
     <footer class="footer">
-        &copy; 2025 The World of Cricket. All rights reserved.
+        &copy; 2025 The World of Chess and Cricket. All rights reserved.
     </footer>
-
-    <script>
-        const toggleButton = document.getElementById('darkModeToggle');
-        const body = document.body;
-        const content = document.querySelectorAll('.content');
-        const textElements = document.querySelectorAll('h3, p, a, h1');
-
-        toggleButton.addEventListener('click', () => {
-            const isDarkMode = body.classList.toggle('dark-mode');
-            content.forEach(section => section.classList.toggle('dark-mode'));
-            textElements.forEach(element => element.classList.toggle('dark-mode'));
-            toggleButton.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-        });
-    </script>
 </body>
 </html>
-
