@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,171 +7,120 @@
     <title>Chess: The Game of Kings</title>
     <style>
         body {
-            background-color: #f5f5f5;
-            color: #000000;
-            font-family: 'Times New Roman', Georgia, serif;
-            line-height: 1.6;
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            transition: background-color 0.5s ease, color 0.5s ease;
         }
 
         header {
-            background-color: #000080;
-            color: #fff;
-            padding: 20px;
+            background: linear-gradient(45deg, #000000, #333333);
+            color: #ffffff;
             text-align: center;
-            margin-bottom: 20px;
+            padding: 30px 20px;
         }
 
         header h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
             margin: 0;
         }
 
         .content {
-            max-width: 1000px;
-            margin: 0 auto;
+            max-width: 1100px;
+            margin: 30px auto;
             padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            transition: background-color 0.5s ease;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        img {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        h3 {
+            font-size: 1.8rem;
+            color: #00c6ff;
+            text-transform: uppercase;
+            margin-top: 30px;
         }
 
-        img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        p, ul {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
         }
 
-        h3, p {
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background: #00c6ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
             font-size: 1rem;
-            transition: color 0.5s ease;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
-        a {
-            color: #007aff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #005bb5;
+        button:hover {
+            background: #0080c6;
+            transform: scale(1.05);
         }
 
         .footer {
-            background-color: #222;
-            color: #fff;
+            background-color: #121212;
             text-align: center;
-            padding: 10px;
-            width: 100%;
-            margin-top: 20px;
+            padding: 15px;
+            margin-top: 30px;
+            color: #888888;
+            font-size: 0.9rem;
         }
 
-        .interactive-board {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
+        .footer p {
+            margin: 0;
         }
-
-        #chess-board {
-            width: 400px;
-            height: 400px;
-            border: 2px solid #000;
-        }
-
-        .toggle-button {
-            display: inline-block;
-            margin: 20px auto;
-            padding: 12px 25px;
-            background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
-            color: #fff;
-            font-size: 1rem;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 100px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .toggle-button:hover {
-            background: linear-gradient(40deg, #ff8c00, #ff0080 70%);
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
     </style>
 </head>
 <body>
     <header>
         <h1>Chess: The Game of Kings</h1>
     </header>
+
     <div class="content">
-        <h3>Introduction</h3>
-        <p>
-            Chess, often referred to as the "Game of Kings," is a two-player strategy board game with a history spanning over 1,500 years. The game originated in India, known as "Chaturanga," and spread to Persia, Europe, and eventually the entire world.
-        </p>
-
-        <h3>Interactive Chess Board</h3>
-        <div class="interactive-board">
-            <div id="chess-board"></div>
-        </div>
-
         <h3>World Chess Champions</h3>
-        <p>Here is a list of every World Chess Champion:</p>
+        <p>Click on any chess champion below to learn more:</p>
         <ul>
-            <li>Wilhelm Steinitz (1886–1894)</li>
-            <li>Emanuel Lasker (1894–1921)</li>
-            <li>Jose Raul Capablanca (1921–1927)</li>
-            <li>Alexander Alekhine (1927–1935, 1937–1946)</li>
-            <li>Max Euwe (1935–1937)</li>
-            <li>Mikhail Botvinnik (1948–1957, 1958–1960)</li>
-            <li>Vasily Smyslov (1957–1958)</li>
-            <li>Mikhail Tal (1960–1961)</li>
-            <li>Tigran Petrosian (1963–1969)</li>
-            <li>Boris Spassky (1969–1972)</li>
-            <li>Bobby Fischer (1972–1975)</li>
-            <li>Anatoly Karpov (1975–1985)</li>
-            <li>Garry Kasparov (1985–2000)</li>
-            <li>Vladimir Kramnik (2000–2007)</li>
-            <li>Viswanathan Anand (2007–2013)</li>
-            <li>Magnus Carlsen (2013–Present)</li>
+            <li>Wilhelm Steinitz (1886–1894) <button onclick="location.href='wilhelm-steinitz.html'">Learn More</button></li>
+            <li>Emanuel Lasker (1894–1921) <button onclick="location.href='emanuel-lasker.html'">Learn More</button></li>
+            <li>Jose Raul Capablanca (1921–1927) <button onclick="location.href='jose-capablanca.html'">Learn More</button></li>
+            <li>Alexander Alekhine (1927–1935, 1937–1946) <button onclick="location.href='alexander-alekhine.html'">Learn More</button></li>
+            <li>Max Euwe (1935–1937) <button onclick="location.href='max-euwe.html'">Learn More</button></li>
+            <li>Mikhail Botvinnik (1948–1957, 1958–1960) <button onclick="location.href='mikhail-botvinnik.html'">Learn More</button></li>
+            <li>Vasily Smyslov (1957–1958) <button onclick="location.href='vasily-smyslov.html'">Learn More</button></li>
+            <li>Mikhail Tal (1960–1961) <button onclick="location.href='mikhail-tal.html'">Learn More</button></li>
+            <li>Tigran Petrosian (1963–1969) <button onclick="location.href='tigran-petrosian.html'">Learn More</button></li>
+            <li>Boris Spassky (1969–1972) <button onclick="location.href='boris-spassky.html'">Learn More</button></li>
+            <li>Bobby Fischer (1972–1975) <button onclick="location.href='bobby-fischer.html'">Learn More</button></li>
+            <li>Anatoly Karpov (1975–1985) <button onclick="location.href='anatoly-karpov.html'">Learn More</button></li>
+            <li>Garry Kasparov (1985–2000) <button onclick="location.href='garry-kasparov.html'">Learn More</button></li>
+            <li>Vladimir Kramnik (2000–2007) <button onclick="location.href='vladimir-kramnik.html'">Learn More</button></li>
+            <li>Viswanathan Anand (2007–2013) <button onclick="location.href='viswanathan-anand.html'">Learn More</button></li>
+            <li>Magnus Carlsen (2013–Present) <button onclick="location.href='magnus-carlsen.html'">Learn More</button></li>
         </ul>
-
-        <h3>The History of Chess</h3>
-        <p>
-            Chess evolved from its early Indian roots into the game we know today. From the legendary rivalry between Kasparov and Karpov to the modern dominance of Magnus Carlsen, the game continues to capture the imagination of players and fans around the world.
-        </p>
-
-        <h3>Modern Innovations</h3>
-        <p>
-            The advent of online platforms has revolutionized chess, allowing players of all levels to compete against opponents worldwide. Innovations such as chess engines and AI analysis have also transformed how the game is studied and played.
-        </p>
     </div>
+
     <footer class="footer">
         <p>© 2025 Chess World. All rights reserved.</p>
     </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.12.0/chess.min.js"></script>
-    <script>
-        const board = Chessboard('chess-board', {
-            draggable: true,
-            dropOffBoard: 'trash',
-            sparePieces: true
-        });
-    </script>
 </body>
 </html>
