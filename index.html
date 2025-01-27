@@ -67,6 +67,49 @@
             padding: 10px;
             width: 100%;
             margin-top: 20px;
+            .animated-button {
+        display: inline-block;
+        padding: 12px 30px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        border-radius: 30px;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        box-shadow: 0 4px 15px rgba(101, 88, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .animated-button:hover {
+        transform: translateY(-3px);
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
+        box-shadow: 0 6px 20px rgba(101, 88, 255, 0.6);
+    }
+
+    .animated-button:active {
+        transform: translateY(2px);
+        box-shadow: 0 3px 10px rgba(101, 88, 255, 0.6);
+    }
+
+    .animated-button::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .animated-button:hover::after {
+        left: 100%;
+    }
 
             
         }
@@ -137,9 +180,9 @@
         </p>
 
         <!-- Add links with proper formatting -->
-        <a href="viratkohli.html" class="page-link">Virat Kohli</a>
-        <a href="Indian%20Cricket%20Team.html" class="page-link">Indian Cricket Team</a>
-           <a href="chess.html" class="page">Chess</a>
-           <a href="magnuscarlsen.html" class="page">Magnus Carlsen</>
+        <a href="viratkohli.html" class="animated button">Virat Kohli</a>
+        <a href="Indian%20Cricket%20Team.html" class="animated button">Indian Cricket Team</a>
+           <a href="chess.html" class="animated button">Chess</a>
+           <a href="magnuscarlsen.html" class="animated button">Magnus Carlsen</>
 </body>
 </html>
