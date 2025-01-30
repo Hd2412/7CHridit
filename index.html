@@ -28,7 +28,7 @@
         header h1 {
             font-size: 4rem;
             margin: 0;
-            font-weight: 700; /* Bold font for header */
+            font-weight: 700;
         }
 
         .content {
@@ -42,7 +42,7 @@
 
         h3 {
             font-size: 1.8rem;
-            font-weight: 700; /* Bold font for subtitles */
+            font-weight: 700;
             margin-top: 1.5rem;
             color: #333;
         }
@@ -51,28 +51,35 @@
             font-size: 1rem;
             margin: 1rem 0;
             color: #555;
-            font-weight: 400; /* Normal font for body text */
+            font-weight: 400;
         }
 
-        a {
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .button {
             display: inline-block;
-            padding: 12px 25px;
-            background: linear-gradient(145deg, #f3f3f3, #e2e2e2);
-            color: #007aff;
+            padding: 14px 30px;
+            background: #1a73e8;
+            color: #fff;
             font-size: 1rem;
+            font-weight: 700;
             text-align: center;
             text-decoration: none;
             border-radius: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
-            border: 1px solid #d1d1d1;
-            margin: 10px 0;
-            font-family: 'Montserrat', sans-serif;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
         }
 
-        a:hover {
-            background: linear-gradient(145deg, #e2e2e2, #f3f3f3);
-            color: #005bb5;
+        .button:hover {
+            background: #0c5ece;
             transform: translateY(-2px);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -116,11 +123,17 @@
         <h3>The Future of Cricket</h3>
         <p>As cricket evolves, new technologies and innovations continue to shape the game. From Decision Review Systems (DRS) to the increasing use of data analytics, cricket is embracing the future while staying true to its roots. The sport’s global reach and passionate fan base ensure that its legacy will endure for generations to come.</p>
 
-        <a href="viratkohli.html">Virat Kohli</a>
-        <a href="Indian%20Cricket%20Team.html">Indian Cricket Team</a>
-        <a href="chess.html">Chess</a>
-        <a href="magnuscarlsen.html">Magnus Carlsen</a>
+
+       
+
+        <div class="button-container">
+            <a href="viratkohli.html" class="button">Virat Kohli</a>
+            <a href="Indian%20Cricket%20Team.html" class="button">Indian Cricket Team</a>
+            <a href="chess.html" class="button">Chess</a>
+            <a href="magnuscarlsen.html" class="button">Magnus Carlsen</a>
+        </div>
     </div>
 </body>
 </html>
+
 
