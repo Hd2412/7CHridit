@@ -4,60 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magnus Carlsen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-         body {
+        body {
             background-color: #f5f5f5;
-            color: #000000;
-            font-family: 'Montserrat', sans-serif;'
-            line-height: 1.6;
+            color: #000;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            transition: background-color 0.5s ease, color 0.5s ease;
+            text-align: center;
         }
 
         header {
-            background-color: #007aff;
+            background: linear-gradient(135deg, #007aff, #005bb5);
             color: #fff;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
+            padding: 40px 20px;
         }
 
         header h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin: 0;
+            font-weight: 700;
         }
 
         .content {
             max-width: 1000px;
-            margin: 0 auto;
+            margin: 30px auto;
             padding: 20px;
             background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .content img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .content img:hover {
+            transform: scale(1.05);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
             margin: 20px 0;
         }
 
-        .footer {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-            margin-top: 20px;
-               a:hover {
-            background: linear-gradient(145deg, #e2e2e2, #f3f3f3);
-            color: #005bb5;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1);
+        .buttons {
+            margin: 30px 0;
         }
+
+        .buttons a {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(135deg, #007aff, #005bb5);
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+        }
+
+        .buttons a:hover {
+            background: linear-gradient(135deg, #005bb5, #004499);
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            background: #222;
+            color: #fff;
+            padding: 15px;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -67,38 +98,27 @@
     </header>
     <div class="content">
         <img src="https://i.guim.co.uk/img/media/3259cab40c87344fb0defab856c6c6623f931aef/421_381_5336_3202/master/5336.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=734c4a9ba0f2af94f192356c15e08430" alt="Magnus Carlsen" />
-        <p>
-            Magnus Carlsen, born on November 30, 1990, in Tønsberg, Norway, is a chess grandmaster and former World Chess Champion. Known for his exceptional talent and deep understanding of the game, Carlsen has become a household name in the chess world. His journey from a prodigious talent to a dominant world champion is a story of perseverance and brilliance.
-        </p>
-        <p>
-            Carlsen’s rise in chess began at an early age. By the time he was 13, he earned the title of grandmaster, making him one of the youngest in history. His style of play, marked by creativity and precision, set him apart from his peers. He soon gained a reputation for excelling in all aspects of the game, from opening theory to endgame mastery.
-        </p>
-        <p>
-            In 2013, Magnus Carlsen dethroned Viswanathan Anand to become the World Chess Champion. This victory marked the beginning of an era dominated by Carlsen, as he successfully defended his title in subsequent matches against elite players such as Sergey Karjakin, Fabiano Caruana, and Ian Nepomniachtchi. His strategic depth and ability to outmaneuver opponents in complex positions earned him widespread admiration.
-        </p>
-        <p>
-            Beyond classical chess, Carlsen has also excelled in rapid and blitz formats. He has won multiple World Rapid and Blitz Chess Championships, showcasing his adaptability and quick thinking under time pressure. His ability to thrive in diverse formats has solidified his position as one of the greatest chess players of all time.
-        </p>
-        <p>
-            Carlsen's influence extends beyond the chessboard. In 2014, he launched Play Magnus, a chess app designed to teach and inspire players of all skill levels. His entrepreneurial ventures, coupled with his charismatic personality, have played a significant role in popularizing chess globally, especially among younger generations.
-        </p>
-        <p>
-            A defining aspect of Carlsen’s chess career is his emphasis on psychological warfare. He often puts pressure on opponents by creating difficult positions and capitalizing on their mistakes. His calm demeanor and resilience in high-stakes situations make him a formidable adversary in any tournament.
-        </p>
-        <p>
-            Off the board, Magnus Carlsen has diverse interests, including sports and trivia. He is an avid football fan and has even participated in fantasy football competitions. His well-rounded personality and relatable hobbies have endeared him to fans, making him a true ambassador for chess.
-        </p>
-        <p>
-            Carlsen's contributions to chess go beyond his individual achievements. He has inspired a new generation of players to pursue the game at a competitive level. His games are studied extensively by enthusiasts and professionals alike, serving as a testament to his enduring impact on the sport.
-        </p>
-        <p>
-<!-- Add links with proper formatting -->
-        <a href="viratkohli.html" class="page-link">Virat Kohli</a>
-        <a href="Indian%20Cricket%20Team.html" class="page">Indian Cricket Team</a>
-           <a href="chess.html" class="page">Chess</a>
-<a href="index.html" class="page">Home>/a>
-
-           
-</head>
+       <p>Magnus Carlsen is widely regarded as one of the greatest chess players of all time. His ability to adapt to any position and outplay opponents with strategic mastery has set him apart.</p>
+        <p>Born in Norway in 1990, Carlsen displayed an extraordinary memory and analytical ability from an early age, solving complex puzzles and showing a keen interest in games.</p>
+        <p>By the age of 13, he became one of the youngest grandmasters in history, signaling his arrival on the international chess scene.</p>
+        <p>Carlsen’s dominance in world chess began when he won the World Chess Championship in 2013, defeating reigning champion Viswanathan Anand.</p>
+        <p>Unlike many grandmasters, Carlsen does not rely heavily on opening theory but rather focuses on his ability to outmaneuver opponents in the middlegame and endgame.</p>
+        <p>His playing style is marked by his exceptional ability to squeeze victories from seemingly equal or drawn positions, a skill that has baffled and frustrated his opponents.</p>
+        <p>Carlsen has won multiple Rapid and Blitz World Championships, proving his versatility across different time formats.</p>
+        <p>He has consistently held the world number one ranking for over a decade, maintaining an Elo rating above 2800, a feat achieved by only a few players in history.</p>
+        <p>In addition to his prowess over the board, Carlsen has contributed to the chess community by launching Play Magnus, an app designed to help people improve their chess skills.</p>
+        <p>Carlsen’s charisma and personality have made him a fan favorite, and he has played an instrumental role in the modern chess boom, partly fueled by online streaming and platforms like Chess.com.</p>
+        <p>Beyond chess, Carlsen is an avid football fan and has even ranked highly in the Fantasy Premier League, showcasing his strategic mindset beyond the board.</p>
+        <p>His ability to remain calm under immense pressure has led to some of the most memorable comebacks in chess history, further cementing his legendary status.</p>
+        <p>Carlsen's business ventures and endorsements have helped him become one of the highest-earning chess players of all time.</p>
+        <p>Despite stepping down as the reigning classical world champion in 2023, Carlsen continues to dominate in other formats and remains the face of modern chess.</p>
+    </div>
+    <div class="buttons">
+        <a href="viratkohli.html">Virat Kohli</a>
+        <a href="Indian%20Cricket%20Team.html">Indian Cricket Team</a>
+        <a href="chess.html">Chess</a>
+        <a href="index.html">Home</a>
+    </div>
+    <div class="footer">&copy; 2024 Magnus Carlsen Fan Page</div>
 </body>
 </html>
